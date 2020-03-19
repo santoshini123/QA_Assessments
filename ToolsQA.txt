@@ -1,0 +1,121 @@
+package automation;
+
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class login {
+	static WebDriver driver;
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		System.out.print("Hello");
+	       System.setProperty("webdriver.chrome.driver","C:\\Users\\dugana.santoshini\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	       driver =new ChromeDriver();
+	       driver.get("https://www.jeevansathi.com/\r\n");
+           driver.manage().window().maximize();
+	       driver.findElement(By.id("loginTopNavBar")).click();
+	       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	       driver.findElement(By.id("loginRegistration")).click();
+	       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	       WebElement email=driver.findElement(By.xpath("//*[@id=\"email_value\"]"));
+	       email.click();
+	       Random randomGenerator = new Random();  
+	       int randomInt = randomGenerator.nextInt(1000);  
+	       email.sendKeys("username"+ randomInt +"@gmail.com");
+	       WebElement phone=driver.findElement(By.xpath("//*[@id=\"phone_box\"]"));
+	       phone.click();
+	      phone.sendKeys("9912665767");
+	       WebElement password=driver.findElement(By.xpath("//*[@id=\"password_value\"]"));
+	       password.click();
+	       Random randomGenerator2 = new Random();  
+	       int randomInt2 = randomGenerator2.nextInt(1000);  
+	       password.sendKeys("username"+ randomInt2);
+	       driver.findElement(By.id("cpf_box")).click();
+	       WebElement profile=driver.findElement(By.id("li_cpf4"));
+	       profile.click();
+	       driver.findElement(By.id("regPage1Submit")).click();
+	       WebElement name=driver.findElement(By.id("name_value"));
+	       name.click();
+	       Random randomGenerator3 = new Random();  
+	       int randomInt3 = randomGenerator3.nextInt(1000);  
+	       name.sendKeys("username " + "username");
+	       WebElement date=driver.findElement(By.id("dob_selector"));
+	       date.click();
+	       driver.findElement(By.xpath("//*[@id=\"date_value\"]")).click();
+	       
+	       
+	       
+	       
+	       
+	       
+	       
+	       
+       }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// new WebDriverWait(driver, 40).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Day')]"))).click();
+	//List<WebElement> daylist = new WebDriverWait(driver, 40).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[contains(@class,'day_option')]")));
+	// for(WebElement dayi:daylist)
+	//if(dayi.getText().contains("7")) {
+	// boolean day = dayi.getText().contains("7");
+	//System.out.println("day is ");
+	
+	
+	// dayi.click();
+	       //String month="March";
+	      // String date1 ="2";
+	      // "//td[text()="+month+"']/../..//a[text()='"+date1+"']";
+
+	       //driver.findElement(By.id("date_value")).click(); 
+	     //  driver.findElement(By.xpath("//*[@id=\"li_dob1\"]"));
+	      // "//td[text()='"+month+"']/../..//a[text()='"+date+"']"
+	      // driver.findElement(By.id("month_value")).click(); 
+	     
+	      // WebElement language=driver.findElement(By.id("tongue-inputBox_setr"));
+	      // lang.click();
+	         
+	       
+	     
+	     
+	       
+	       
+
+	     
+	       
+	       
+	       
+	       
+	       
+
+	      
+ 
+	       
+	       
+
+
+	       
+	}
+
+
+
+
+
