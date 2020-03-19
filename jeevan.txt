@@ -1,0 +1,509 @@
+package jeevan;
+
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class reg {
+
+	private static ChromeDriver driver;
+
+	public static void main(String[] args)throws Exception {
+		
+		// TODO Auto-generated method stub
+		System.out.print("Hello");
+	       System.setProperty("webdriver.chrome.driver","C:\\Users\\dugana.santoshini\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	       driver =new ChromeDriver();
+	       driver.get("https://www.jeevansathi.com");
+        driver.manage().window().maximize();
+	       driver.findElement(By.id("loginTopNavBar")).click();
+	       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	       driver.findElement(By.id("loginRegistration")).click();
+	       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	       WebElement email=driver.findElement(By.xpath("//*[@id=\"email_value\"]"));
+	       email.click();
+	       Random randomGenerator = new Random();  
+	       int randomInt = randomGenerator.nextInt(1000);  
+	       email.sendKeys("username"+ randomInt +"@gmail.com");
+	       WebElement phone=driver.findElement(By.xpath("//*[@id=\"phone_box\"]"));
+	       phone.click();
+	      phone.sendKeys("9912665767");
+	       WebElement password=driver.findElement(By.xpath("//*[@id=\"password_value\"]"));
+	       password.click();
+	       Random randomGenerator2 = new Random();  
+	       int randomInt2 = randomGenerator2.nextInt(1000);  
+	       password.sendKeys("username"+ randomInt2);
+	       driver.findElement(By.id("cpf_box")).click();
+	       WebElement profile=driver.findElement(By.id("li_cpf4"));
+	       profile.click();
+	       driver.findElement(By.id("regPage1Submit")).click();
+	       WebElement name=driver.findElement(By.id("name_value"));
+	       name.click();
+	       Random randomGenerator3 = new Random();  
+	       int randomInt3 = randomGenerator3.nextInt(1000);  
+	       name.sendKeys("username " + "username");
+	       WebElement date=driver.findElement(By.id("dob_selector"));
+	       date.click();
+	       driver.findElement(By.id("dateli3")).click();
+	       driver.findElement(By.id("month_value")).click();
+           driver.findElement(By.id("monthli3")).click();
+	       driver.findElement(By.id("yearli2000")).click();
+	       
+	       driver.findElement(By.xpath(" //*[@id=\"mtongue-inputBox_set\"]")).click();
+	       driver.findElement(By.id("mtongue_0")).click();
+	       
+	       driver.findElement(By.xpath("//*[@id=\"religion-inputBox_set\"]")).click();
+	       driver.findElement(By.id("religion_0")).click();
+	       
+	       driver.findElement(By.xpath("//*[@id=\"caste-inputBox_set\"]")).click();
+	       driver.findElement(By.id("caste_17")).click();
+
+ 
+	       driver.findElement(By.id("caste_no_bar")).click();
+	       
+	      // driver.findElement(By.xpath("//*[@id=\"subcaste-inputBox_set\"]")).click(); 
+	       //driver.findElement(By.id("caste_131")).click();
+
+
+	       
+	       driver.findElement(By.id("manglik_label")).click();
+
+	       driver.findElement(By.id("li_manglik0")).click();
+
+	       driver.findElement(By.id("horoscopeMatch_selector")).click();
+	       driver.findElement(By.id("li_horoscopeMatch1")).click();
+	      // hor.sendKeys(Keys.CONTROL+"\t");
+	      // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	      // driver.findElement(By.id("mstatus_box")).click();
+
+           //marital status selection
+	     //  driver.findElement(By.id("mstatus_0")).click();
+	       
+	       //driver.findElement(By.xpath("//div[@id='mstatus_box']")).click();
+	       driver.findElement(By.id("mstatus_label")).click();
+	      
+	       driver.findElement(By.id("mstatus_0")).click();
+	       
+	       
+	       driver.findElement(By.xpath("//*[@id=\"height_box\"]")).click();
+	       driver.findElement(By.id("height_10")).click();
+	       
+	       driver.findElement(By.xpath("//*[@id=\"regPage2Submit\"]")).click();
+	       
+	       driver.findElement(By.id("countryReg-inputBox_set")).click();
+	       driver.findElement(By.id("countryReg_0")).click();
+	       
+	       driver.findElement(By.id("stateReg-inputBox_set")).click();
+	       driver.findElement(By.id("stateReg_1")).click();
+	       
+	       driver.findElement(By.id("cityReg-inputBox_set")).click();
+	       driver.findElement(By.id("cityReg_12")).click();
+
+	       driver.findElement(By.id("hdegree-inputBox_set")).click();
+	       driver.findElement(By.id("hdegree_0")).click();
+	       
+	       driver.findElement(By.id("employed_in-inputBox_set")).click();
+	       driver.findElement(By.id("employed_in_0")).click();
+	       
+	       driver.findElement(By.id("occupation-inputBox_set")).click();
+	       driver.findElement(By.id("occupation_2")).click();
+	       
+	       driver.findElement(By.id("income_box")).click();
+	       driver.findElement(By.id("income_2")).click();
+
+
+	       driver.findElement(By.id("aboutme_box")).click();
+	       driver.findElement(By.id("aboutme_value")).sendKeys("Friendly / Personable and my goal is become a dancerFriendly / Personable and my goal is become a dancerFriendly / Personable and my goal is become a dancer");
+	       
+	       
+	       driver.findElement(By.id("regPage3Submit")).click();
+	       
+	      // driver.findElement(By.id("aboutme_box")).click();
+
+
+	       driver.findElement(By.id("familyType_box")).click();
+	       driver.findElement(By.id("li_familyType1")).click();
+	       
+	       
+	       driver.findElement(By.id("fatherOccupation_box")).click();
+	       driver.findElement(By.id("fatherOccupation_2")).click();
+
+	       driver.findElement(By.id("motherOccupation_box")).click();
+	       driver.findElement(By.id("motherOccupation_7")).click();
+	       
+	       driver.findElement(By.id("brother_box")).click();
+	       driver.findElement(By.id("li_brother1")).click();
+	       
+	       
+	       driver.findElement(By.id("sister_box")).click();
+	       driver.findElement(By.id("li_sister0")).click();
+
+	       driver.findElement(By.id("familyState_box")).click();
+	       driver.findElement(By.id("familyState_1")).click();
+	       
+	       driver.findElement(By.id("familyCity_label")).click();
+	       driver.findElement(By.id("familyCity_3")).click();
+
+	       driver.findElement(By.id("address_label")).click();
+	       driver.findElement(By.id("address_value")).sendKeys("ABCCCCCC STREET");
+
+	       
+	       driver.findElement(By.id("aboutfamily_label")).click();
+	       driver.findElement(By.id("aboutfamily_value")).sendKeys("ABCCCCCC vcscjbshchbjbc");
+	       
+	       
+	       driver.findElement(By.id("skipPage4")).click();
+	       
+	       driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[7]/div[1]/div")).click();
+
+	      
+	       
+	       
+	       
+	        
+	       
+
+	}
+
+}
+
+
+
+
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2 (master)
+$ git clone https://github.com/jagriti10/AssessmentsQA.git
+Cloning into 'AssessmentsQA'...
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 15 (delta 1), reused 14 (delta 0), pack-reused 0
+Unpacking objects: 100% (15/15), 7.77 KiB | 89.00 KiB/s, done.
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2 (master)
+$ ls
+AssessmentsQA/
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2 (master)
+$ ls
+AssessmentsQA/
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2 (master)
+$ git  status
+warning: could not open directory '$RECYCLE.BIN/S-1-5-21-1318347784-130420028-829490212-20048/': Permission denied
+warning: could not open directory 'System Volume Information/': Permission denied
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../$RECYCLE.BIN/
+        ../AssessmentsQA/
+        ../Task-1/
+        ../sample.txt
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2 (master)
+$ git add reg.java
+fatal: pathspec 'reg.java' did not match any files
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2 (master)
+$ cd AssessmentsQA
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ pwd
+/d/task-2/AssessmentsQA
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ ls
+JagritiAssessment/  reg.java
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git branch santoshini
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git checkout santoshini
+Switched to branch 'santoshini'
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git add reg.java
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git status
+On branch santoshini
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   reg.java
+
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git push origin santoshini
+remote: Permission to jagriti10/AssessmentsQA.git denied to Dsantoshinisai.
+fatal: unable to access 'https://github.com/jagriti10/AssessmentsQA.git/': The requested URL returned error: 403
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager
+user.name= santoshini123
+user.email=santoshinisai2@gmail.com
+user.password=Santoshini@123
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/jagriti10/AssessmentsQA.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git push origin santoshini
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'santoshini' on GitHub by visiting:
+remote:      https://github.com/jagriti10/AssessmentsQA/pull/new/santoshini
+remote:
+To https://github.com/jagriti10/AssessmentsQA.git
+ * [new branch]      santoshini -> santoshini
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git checkout master
+Switched to branch 'master'
+A       reg.java
+Your branch is up to date with 'origin/master'.
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git push origin master
+Everything up-to-date
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git checkout santoshini
+Switched to branch 'santoshini'
+A       reg.java
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git commit -m "done"
+[santoshini b1a4965] done
+ 1 file changed, 175 insertions(+)
+ create mode 100644 reg.java
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git push origin santoshini
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.65 KiB | 1.65 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/jagriti10/AssessmentsQA.git
+   b5f1681..b1a4965  santoshini -> santoshini
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git push origin master
+Everything up-to-date
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git chckout santoshini
+git: 'chckout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)   //*[@id="identifierId"] //*[@id="identifierNext"]/span/span  v//*[@id="password"]/div[1]/div/div[1]/input //*[@id="gb"]/div[2]/div[1]/div[1]/svg
+$ git checkout santoshini
+Switched to branch 'santoshini'
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ ls
+JagritiAssessment/  reg.java
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ giit status
+bash: giit: command not found
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git status
+On branch santoshini
+nothing to commit, working tree clean
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git push origin santoshini
+Everything up-to-date
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git push -u origin santoshini
+Everything up-to-date
+Branch 'santoshini' set up to track remote branch 'santoshini' from 'origin'.
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        reg.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git add reg.java
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   reg.java
+
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git checkout santoshini
+error: Your local changes to the following files would be overwritten by checkout:
+        reg.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git commit -m"done"
+[master 4da8578] done
+ 1 file changed, 176 insertions(+)
+ create mode 100644 reg.java
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (master)
+$ git checkout santoshini
+Switched to branch 'santoshini'
+Your branch is up to date with 'origin/santoshini'.
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git status
+On branch santoshini
+Your branch is up to date with 'origin/santoshini'.
+
+nothing to commit, working tree clean
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ ls
+JagritiAssessment/  reg.java
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git push origin santoshini
+Everything up-to-date
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git pull
+Already up to date.
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git pull origin master
+From https://github.com/jagriti10/AssessmentsQA
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git status
+On branch santoshini
+Your branch is up to date with 'origin/santoshini'.
+
+nothing to commit, working tree clean
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ git status
+On branch santoshini
+Your branch is up to date with 'origin/santoshini'.
+
+nothing to commit, working tree clean
+
+dugana.santoshini@NDI-LAP-594 MINGW64 /d/task-2/AssessmentsQA (santoshini)
+$ gitk
+
