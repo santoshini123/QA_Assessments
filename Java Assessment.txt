@@ -7,7 +7,7 @@ public class Training {
 	
 
 	public Training() {
-
+   
 		int a=3;
 
 		int b=5;
